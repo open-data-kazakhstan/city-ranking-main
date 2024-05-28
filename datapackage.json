@@ -2,6 +2,106 @@
     "profile": "tabular-data-package",
     "resources": [
         {
+            "path": "archive\\merged_to_normalize.csv",
+            "profile": "tabular-data-resource",
+            "name": "merged_to_normalize",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "Region",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "air_pollution_index",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "avg_salary",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "Total_city_population",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "clearance_rate",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "crime_amount",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "gdp_per_capita_tenge",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "Postgraduate_Education",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "Higher_Education",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "household_spending_per_month",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "life_expectancy",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "med_institutions_amount",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "number_of_cars",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "number_of_schools",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "public_transport_quantity",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "unemployment_rate",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "number of entertainment places",
+                        "type": "integer",
+                        "format": "default"
+                    }
+                ],
+                "missingValues": [
+                    ""
+                ]
+            }
+        },
+        {
             "path": "data\\final_rating.csv",
             "profile": "tabular-data-resource",
             "name": "final_rating",
