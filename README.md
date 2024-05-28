@@ -2,11 +2,13 @@
 
 This project provides an analysis of various cities based on multiple factors such as air pollution, crime rate, household spending, and unemployment rate. It uses a combination of data imputation, normalization, and visualization techniques to rank cities according to their overall scores.
 
-## Data Description
+## Source
 
-The dataset `merged_to_normalize.csv` contains various metrics for different cities. In total, 15 different parameters from our previous research were included. All of the data is originally sourced from stat.gov.kz and later merged and cleaned for use in this project.
+All of the data is originally sourced from stat.gov.kz and later merged and cleaned for use in this project.
 
-## Methodology
+## Data
+
+The dataset `merged_to_normalize.csv` contains various metrics for different cities. In total, 15 different parameters from our previous research were included. 
 
 ### Data Cleaning:
 - The last row of the CSV is dropped as it might contain summary or unwanted data.
@@ -26,6 +28,22 @@ The dataset `merged_to_normalize.csv` contains various metrics for different cit
 - **crime_amount**: Total number of crimes
 - **household_spending_per_month**: Average household spending per month
 - **unemployment_rate**: Unemployment rate in the city
+
+### Positive Indicators:
+- The rest of the columns that represent positive indicators are as follows:
+
+- **Region**: The name of the region or city.
+- **avg_salary**: Average salary of the residents in the region.
+- **Total_city_population**: Total population of the region.
+- **gdp_per_capita_tenge**: Gross Domestic Product (GDP) per capita in Tenge.
+- **Postgraduate_Education**: Proportion of the population with postgraduate education.
+- **Higher_Education**: Proportion of the population with higher education.
+- **life_expectancy**: Average life expectancy of the residents.
+- **med_institutions_amount**: Number of medical institutions in the region.
+- **number_of_schools**: Total number of schools in the region.
+- **public_transport_quantity**: Quantity of public transportation available in the region.
+- **number of entertainment places**: Number of entertainment venues in the region.
+- **Total_Score**: An overall score or index derived from various metrics to assess the region's quality or performance.
 
 ### Scoring:
 - A total score for each city is calculated by summing the normalized values of the selected columns.
