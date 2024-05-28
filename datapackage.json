@@ -1,0 +1,35 @@
+{
+    "profile": "tabular-data-package",
+    "resources": [
+        {
+            "path": "data\\final_rating.csv",
+            "profile": "tabular-data-resource",
+            "name": "final_rating",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "field1",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "Region",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "Total_Score",
+                        "type": "number",
+                        "format": "default"
+                    }
+                ],
+                "missingValues": [
+                    ""
+                ]
+            }
+        }
+    ]
+}

@@ -10,6 +10,8 @@ All of the data is originally sourced from stat.gov.kz and later merged and clea
 
 The dataset `merged_to_normalize.csv` contains various metrics for different cities. In total, 15 different parameters from our previous research were included. 
 
+We have also added some metadata such as column descriptions and [data packaged](https://specs.frictionlessdata.io/data-package/) it.
+
 ### Data Cleaning:
 - The last row of the CSV is dropped as it might contain summary or unwanted data.
 - Only numerical columns are selected for further processing.

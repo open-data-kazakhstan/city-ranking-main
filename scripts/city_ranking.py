@@ -5,7 +5,7 @@ import numpy as np
 from sklearn.impute import KNNImputer
 
 # Import the CSV
-df = pd.read_csv('./merged_to_normalize.csv')
+df = pd.read_csv('./archive/merged_to_normalize.csv')
 df.drop(df.tail(1).index,inplace=True)
 
 # Select the numerical columns
