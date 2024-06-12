@@ -51,6 +51,12 @@ We have also added some metadata such as column descriptions and [data packaged]
 - A total score for each city is calculated by summing the normalized values of the selected columns.
 - Cities are then ranked based on their total scores.
 
+### Clustering:
+- KMeans clustering is performed on the normalized data (excluding the region and total score columns) to categorize cities into clusters based on their overall characteristics.
+- PCA (Principal Component Analysis) is used to reduce the dimensions of the data for visualization purposes. This helps to visualize the clusters in a 2D space.
+- Three clusters are used, each representing different levels of life quality: average, higher, and lower.
+
+
 ### Visualization:
 - First, a horizontal bar plot is created to display the scores of each city:
 
@@ -59,6 +65,14 @@ We have also added some metadata such as column descriptions and [data packaged]
 - Then, the 'Total score' column is scaled again to represent values from 0 to 100, and a second graph is made for better clarity.
 
 ![image](https://github.com/open-data-kazakhstan/city-ranking-main/assets/109875855/475546b4-d39c-4511-b14a-2d9e55b87e6c)
+
+- After that, a PCA plot is created to visualize the clusters formed by KMeans. Each city is represented in a 2D space, colored according to its cluster:
+
+![image](https://github.com/open-data-kazakhstan/city-ranking-main/assets/109875855/1fcbdd0a-f0b2-4015-b608-26c11158fb56)
+
+- Finally, a bar chart is created where each city's bar is colored according to its cluster, providing a visual representation of both the total score and the cluster classification:
+
+![image](https://github.com/open-data-kazakhstan/city-ranking-main/assets/109875855/623fd685-9617-448f-a19e-09b417fa279d)
 
 
 ## Results
