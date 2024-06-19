@@ -9,7 +9,7 @@ from matplotlib.colors import ListedColormap
 from adjustText import adjust_text
 
 # Import the CSV
-df = pd.read_csv('./merged_to_normalize.csv')
+df = pd.read_csv('./merged-calculated.csv')
 df.drop(df.tail(1).index, inplace=True)
 
 # Select the numerical columns
@@ -35,8 +35,8 @@ scaled_df = pd.DataFrame(scaled_data, columns=numerical_cols)
 scaled_df.insert(0, 'Region', regions)
 
 # Select the columns with negative variables
-negative_columns = ['air_pollution_index', 'clearance_rate', 'crime_amount',
-                    'household_spending_per_month', 'unemployment_rate']
+negative_columns = ['air_pollution_index', 'clearance-rate-divided,' 'crime_amount',
+                    'household_spending_per_month', 'car-amount-rate', 'unemployment-rate']
 
 # Make the negative columns show up as such
 scaled_df[numerical_cols] = scaled_df[numerical_cols].apply(lambda x: x * -1
@@ -121,20 +121,20 @@ Z = Z.reshape(xx.shape)
 
 # Plot the decision boundary by assigning a color to each point in the mesh
 plt.figure(figsize=(14, 10))
-plt.contourf(xx, yy, Z, alpha=0.3, cmap=ListedColormap(['yellow', 'green', 'red']))
+plt.contourf(xx, yy, Z, alpha=0.3, cmap=ListedColormap(['red', 'yellow', 'green']))
 
 # Plot the clusters
-colors = ['yellow', 'green', 'red']
-labels = ['Average life quality', 'Higher life quality', 'Lower life quality']  
+colors = ['red', 'yellow', 'green']
+labels = ['Lower life quality', 'Average life quality', 'Higher life quality']
 for cluster in range(3):
     clustered_data = pc_df[pc_df['Cluster'] == cluster]
-    plt.scatter(clustered_data['PC1'], clustered_data['PC2'], 
+    plt.scatter(clustered_data['PC1'], clustered_data['PC2'],
                 label=f'{labels[cluster]}', color=colors[cluster])
 
 # Add region labels to the plot
 texts = []
 for i in range(pc_df.shape[0]):
-    texts.append(plt.text(pc_df.loc[i, 'PC1'], pc_df.loc[i, 'PC2'], pc_df.loc[i, 'Region'], 
+    texts.append(plt.text(pc_df.loc[i, 'PC1'], pc_df.loc[i, 'PC2'], pc_df.loc[i, 'Region'],
                           fontsize=7, ha='right'))
 
 # Adjust text to avoid overlap
@@ -156,21 +156,24 @@ X = df_sorted.drop(columns=['Region', 'Total_Score'])
 kmeans = KMeans(n_clusters=3, random_state=42)
 df_sorted['Cluster'] = kmeans.fit_predict(X)
 
+# # Define the labels
+labels_bar = ['Average life quality', 'Lower life quality', 'Higher life quality']
+
 # Define the colors for each cluster
-colors = {0: 'yellow', 1: 'green', 2: 'red'}
+colors_bar = {0: 'yellow', 1: 'red', 2: 'green'}
 
 # Plotting the bar chart
 plt.figure(figsize=(10, 6))
 
 # Loop through each row and plot a bar with the corresponding color
 for idx, row in df_sorted.iterrows():
-    plt.barh(row['Region'], row['Total_Score'], color=colors[row['Cluster']])
+    plt.barh(row['Region'], row['Total_Score'], color=colors_bar[row['Cluster']])
 
 # Set labels and legend
 plt.xlabel('Total Score')
 plt.title('Total Score with Colored Clusters')
-plt.legend(handles=[plt.Rectangle((0, 0), 1, 1, color=color) for color in colors.values()],
-           labels=labels, 
+plt.legend(handles=[plt.Rectangle((0, 0), 1, 1, color=color) for color in colors_bar.values()],
+           labels=labels_bar,
            loc='lower right')
 
 plt.gca().invert_yaxis()
