@@ -8,7 +8,7 @@ All of the data is originally sourced from stat.gov.kz and later merged and clea
 
 ## Data
 
-The dataset `merged_to_normalize.csv` contains various metrics for different cities. In total, 15 different parameters from our previous research were included. 
+The dataset `merged_to_normalize.csv` contains various metrics for different cities. In total, 15 different parameters from our previous research were included.
 
 We have also added some metadata such as column descriptions and [data packaged](https://specs.frictionlessdata.io/data-package/) it.
 
@@ -26,26 +26,27 @@ We have also added some metadata such as column descriptions and [data packaged]
 - Several columns representing negative indicators are adjusted so that higher values represent worse conditions. Namely, the following parameters have been concluded to negatively effect a region's rating:
 
 - **air_pollution_index**: A metric indicating the level of air pollution
-- **clearance_rate**: Rate at which crimes are solved
+- **clearance_rate**: Rate at which crimes are solved divided by the amount of crimes
 - **crime_amount**: Total number of crimes
 - **household_spending_per_month**: Average household spending per month
-- **unemployment_rate**: Unemployment rate in the city
+- **unemployment-rate**: Unemployment rate in the city
+- **car-amount-rate**: Number of cars per 1000 inhabitants
 
 ### Positive Indicators:
 - The rest of the columns that represent positive indicators are as follows:
 
 - **Region**: The name of the region or city.
 - **avg_salary**: Average salary of the residents in the region.
-- **Total_city_population**: Total population of the region.
-- **gdp_per_capita_tenge**: Gross Domestic Product (GDP) per capita in Tenge.
+- **Population**: Total population of the region.
+- **gdp_per_capita**: Gross Domestic Product (GDP) per capita in Tenge.
 - **Postgraduate_Education**: Proportion of the population with postgraduate education.
 - **Higher_Education**: Proportion of the population with higher education.
 - **life_expectancy**: Average life expectancy of the residents.
-- **med_institutions_amount**: Number of medical institutions in the region.
-- **number_of_schools**: Total number of schools in the region.
-- **public_transport_quantity**: Quantity of public transportation available in the region.
-- **number of entertainment places**: Number of entertainment venues in the region.
-- **Total_Score**: An overall score or index derived from various metrics to assess the region's quality or performance.
+- **Med-institution-rate**: Number of medical institutions per 10000 inhabitants.
+- **School-number-rate**: Number of schools per 10000 inhabitants in the region.
+- **public_transport_quantity**: Quantity of public transportation per 10000 inhabitants.
+- **Entertainment-places-rate**: Number of entertainment venues per 10000 inhabitants.
+- **Total_Score**: An overall score or index derived from various metrics to assess the region's quality of life.
 
 ### Scoring:
 - A total score for each city is calculated by summing the normalized values of the selected columns.
@@ -60,19 +61,19 @@ We have also added some metadata such as column descriptions and [data packaged]
 ### Visualization:
 - First, a horizontal bar plot is created to display the scores of each city:
 
-![image](https://github.com/open-data-kazakhstan/city-ranking-main/assets/109875855/cc425d58-768c-465d-af19-e50e0ba04fbc)
+![image](https://github.com/open-data-kazakhstan/city-ranking-main/assets/109875855/b1cab6f6-cda5-463d-90ea-d122af1a9dd3)
 
 - Then, the 'Total score' column is scaled again to represent values from 0 to 100, and a second graph is made for better clarity.
 
-![image](https://github.com/open-data-kazakhstan/city-ranking-main/assets/109875855/475546b4-d39c-4511-b14a-2d9e55b87e6c)
+![image](https://github.com/open-data-kazakhstan/city-ranking-main/assets/109875855/16736d0a-4e31-4f65-9ce2-9f15d186a48a)
 
 - After that, a PCA plot is created to visualize the clusters formed by KMeans. Each city is represented in a 2D space, colored according to its cluster:
 
-![image](https://github.com/open-data-kazakhstan/city-ranking-main/assets/109875855/1fcbdd0a-f0b2-4015-b608-26c11158fb56)
+![image](https://github.com/open-data-kazakhstan/city-ranking-main/assets/109875855/1d0a6a89-f6d8-41ff-88d3-7ec90280e1e8)
 
 - Finally, a bar chart is created where each city's bar is colored according to its cluster, providing a visual representation of both the total score and the cluster classification:
 
-![image](https://github.com/open-data-kazakhstan/city-ranking-main/assets/109875855/623fd685-9617-448f-a19e-09b417fa279d)
+![image](https://github.com/open-data-kazakhstan/city-ranking-main/assets/109875855/592e6e72-2853-44ad-9d50-5d7a6d167fbd)
 
 
 ## Results
