@@ -9,7 +9,7 @@ from matplotlib.colors import ListedColormap
 from adjustText import adjust_text
 
 # Import the CSV
-df = pd.read_csv('./merged-calculated.csv')
+df = pd.read_csv('archive/merged-calculated.csv')
 df.drop(df.tail(1).index, inplace=True)
 
 # Select the numerical columns
@@ -24,6 +24,9 @@ df_filled = pd.DataFrame(imputer.fit_transform(df[numerical_cols]),
 
 # Update the original DataFrame with filled values
 df[numerical_cols] = df_filled
+
+#df.to_csv("data/fillout.csv")
+
 
 # Extract the region column for later use
 regions = df.pop('Region')
@@ -42,6 +45,7 @@ negative_columns = ['air_pollution_index', 'clearance-rate-divided,' 'crime_amou
 scaled_df[numerical_cols] = scaled_df[numerical_cols].apply(lambda x: x * -1
                                                             if x.name in negative_columns
                                                             else x)
+#scaled_df.to_csv("data/scaled.csv")
 
 # Sum up the individual ratings for each region to get their total score
 scaled_df['Total_Score'] = scaled_df[numerical_cols].sum(axis=1)
@@ -179,3 +183,4 @@ plt.legend(handles=[plt.Rectangle((0, 0), 1, 1, color=color) for color in colors
 plt.gca().invert_yaxis()
 plt.tight_layout()
 plt.show()
+
