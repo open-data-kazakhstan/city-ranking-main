@@ -1,10 +1,31 @@
 {
+    "hash": "f335011dc08c87102afb6619a69b6db4",
     "profile": "tabular-data-package",
+    "title": "Combined indicators for regions and cities",
+    "description": "Indicatores that describes each 19 regions in Republic of Kazakhstan",
+    "country": "KAZ",
+    "contributors": [
+      {
+        "title": "Open Data Kazakhstan Github Organization",
+        "email": "meiran1991@gmail.com",
+        "path": "https://github.com/open-data-kazakhstan",
+        "role": "author",
+        "organization":"Open Data Kazakhstan"
+      }
+    ],
+    "sources": [
+      {
+        "title": "The Bureau of National Statistics of Kazakhstan",
+        "path": "https://stat.gov.kz",
+        "email": "e.stat@aspire.gov.kz"
+      } 
+    ],
     "resources": [
         {
-            "path": "archive\\merged_to_normalize.csv",
+            "path": "archive/merged_to_normalize.csv",
             "profile": "tabular-data-resource",
-            "name": "merged_to_normalize",
+            "name": "normalized-indicators",
+            "title":"Normalized and combined indicators",
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
@@ -13,87 +34,105 @@
                     {
                         "name": "Region",
                         "type": "string",
-                        "format": "default"
+                        "format": "default",
+                        "description": "Region and major cities name"
+                        
                     },
                     {
                         "name": "air_pollution_index",
                         "type": "number",
-                        "format": "default"
+                        "format": "default",
+                        "description": "A metric indicating the level of air pollution"
                     },
                     {
                         "name": "avg_salary",
                         "type": "number",
-                        "format": "default"
+                        "format": "default",
+                        "description": "Average salary of the residents in the region"
                     },
                     {
                         "name": "Total_city_population",
                         "type": "number",
-                        "format": "default"
+                        "format": "default",
+                        "description": "Total population of the region"
                     },
                     {
                         "name": "clearance_rate",
                         "type": "number",
-                        "format": "default"
+                        "format": "default",
+                        "description": "Rate at which crimes are solved divided by the number of crimes"
                     },
                     {
                         "name": "crime_amount",
                         "type": "number",
-                        "format": "default"
+                        "format": "default",
+                        "description": "Total number of crimes"
                     },
                     {
                         "name": "gdp_per_capita_tenge",
                         "type": "number",
-                        "format": "default"
+                        "format": "default",
+                        "description": "Gross Domestic Product (GDP) per capita in Tenge"
                     },
                     {
                         "name": "Postgraduate_Education",
                         "type": "number",
-                        "format": "default"
+                        "format": "default",
+                        "description": "Proportion of the population with postgraduate education"
                     },
                     {
                         "name": "Higher_Education",
                         "type": "number",
-                        "format": "default"
+                        "format": "default",
+                        "description": "Proportion of the population with higher education"
                     },
                     {
                         "name": "household_spending_per_month",
                         "type": "number",
-                        "format": "default"
+                        "format": "default",
+                        "description": "Average household spending per month"
                     },
                     {
                         "name": "life_expectancy",
                         "type": "number",
-                        "format": "default"
+                        "format": "default",
+                        "description": "Average life expectancy of the residents"
                     },
                     {
                         "name": "med_institutions_amount",
                         "type": "number",
-                        "format": "default"
+                        "format": "default",
+                        "description": "Number of medical institutions per 10,000 inhabitants"
                     },
                     {
                         "name": "number_of_cars",
                         "type": "number",
-                        "format": "default"
+                        "format": "default",
+                        "description": "Number of cars per 1,000 inhabitants"
                     },
                     {
                         "name": "number_of_schools",
                         "type": "number",
-                        "format": "default"
+                        "format": "default",
+                        "description": "Number of schools per 10,000 inhabitants in the region"
                     },
                     {
                         "name": "public_transport_quantity",
                         "type": "number",
-                        "format": "default"
+                        "format": "default",
+                        "description": "Quantity of public transportation per 10,000 inhabitants"
                     },
                     {
                         "name": "unemployment_rate",
                         "type": "number",
-                        "format": "default"
+                        "format": "default",
+                        "description": "Unemployment rate in the city."
                     },
                     {
                         "name": "number of entertainment places",
                         "type": "integer",
-                        "format": "default"
+                        "format": "default",
+                        "description": "Number of entertainment venues per 10,000 inhabitants"
                     }
                 ],
                 "missingValues": [
@@ -102,28 +141,32 @@
             }
         },
         {
-            "path": "data\\final_rating.csv",
+            "path": "data/final_rating.csv",
             "profile": "tabular-data-resource",
-            "name": "final_rating",
+            "name": "final-rating",
+            "title": "Final gained score for each region and city",
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
             "schema": {
                 "fields": [
                     {
-                        "name": "field1",
+                        "name": "id",
                         "type": "integer",
-                        "format": "default"
+                        "format": "default",
+                        "description":"Unique identifier"
                     },
                     {
                         "name": "Region",
                         "type": "string",
-                        "format": "default"
+                        "format": "default",
+                        "description":"Region and major cities name"
                     },
                     {
                         "name": "Total_Score",
                         "type": "number",
-                        "format": "default"
+                        "format": "default",
+                        "description":"Total score"
                     }
                 ],
                 "missingValues": [

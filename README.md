@@ -4,11 +4,15 @@ This project provides an analysis of various cities based on multiple factors su
 
 ## Source
 
-All of the data is originally sourced from stat.gov.kz and later merged and cleaned for use in this project.
+All of the data is originally sourced from [The Bureau of National Statistics of Kazakhstan](stat.gov.kz) and later merged and cleaned for use in this project.
+
+## Metadata
+
+Metadata is based on [frictionlessdata's data package standard](https://specs.frictionlessdata.io/data-package/).
 
 ## Data
 
-The dataset `merged_to_normalize.csv` contains various metrics for different cities. In total, 15 different parameters from our previous research were included.
+The dataset `merged_to_normalize.csv` contains various metrics for different cities. In total, 16 different parameters from our previous research were included.
 
 We have also added some metadata such as column descriptions and [data packaged](https://specs.frictionlessdata.io/data-package/) it.
 
