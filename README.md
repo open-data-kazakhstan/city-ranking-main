@@ -67,10 +67,10 @@ Regions by sustainability score for equally assigned weight:
 Regions by sustainability score for Environmental importance weighting:
 ![environmental](https://github.com/user-attachments/assets/fe41ff7d-0560-4f29-a95f-2f5f82699877)
 
-Regions with top 5 and bottom 5 sustainability score for equally assigned weight.
+Regions with top 5(green) and bottom 5(red) sustainability score for equally assigned weight.
 ![equal_map](https://github.com/user-attachments/assets/127181b5-fe0a-4100-a80f-3758913b00db)
 
-Regions with top 5 and bottom 5 sustainability score for Environmental importance weighting.
+Regions with top 5 (green) and bottom 5(red) sustainability score for Environmental importance weighting.
 ![environmental_map](https://github.com/user-attachments/assets/ccc33907-a36e-49d5-9b56-30e50ec23ff3)
 
 ### Clustering:
