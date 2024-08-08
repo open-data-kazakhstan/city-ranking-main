@@ -1,6 +1,6 @@
-# city-ranking-main
+# Aggregated sustainability indicators and ranking in urban areas of the Republic of Kazakhstan
 
-This project provides an analysis of various cities based on multiple factors such as air pollution, crime rate, household spending, and unemployment rate. It uses a combination of data imputation, normalization, and visualization techniques to rank cities according to their overall scores.
+This project provides an analysis of various cities based on multiple factors such as air pollution, crime rate, household spending, and unemployment rate. It uses a combination of data imputation, normalization, and visualization techniques to rank cities according to their overall scores using equal and Environmental importance weighting techniques for developing aggregated sustainability indicators for live quality evaluation in urban areas of the Republic of Kazakhstan.
 
 ## Source
 
@@ -30,7 +30,6 @@ We have also added some metadata such as column descriptions and [data packaged]
 - Several columns representing negative indicators are adjusted so that higher values represent worse conditions. Namely, the following parameters have been concluded to negatively effect a region's rating:
 
 - **air_pollution_index**: A metric indicating the level of air pollution
-- **clearance_rate**: Rate at which crimes are solved divided by the amount of crimes
 - **crime_amount**: Total number of crimes
 - **household_spending_per_month**: Average household spending per month
 - **unemployment-rate**: Unemployment rate in the city
@@ -50,11 +49,17 @@ We have also added some metadata such as column descriptions and [data packaged]
 - **School-number-rate**: Number of schools per 10000 inhabitants in the region.
 - **public_transport_quantity**: Quantity of public transportation per 10000 inhabitants.
 - **Entertainment-places-rate**: Number of entertainment venues per 10000 inhabitants.
+- **clearance_rate**: Rate at which crimes are solved divided by the amount of crimes
 - **Total_Score**: An overall score or index derived from various metrics to assess the region's quality of life.
 
-### Scoring:
-- A total score for each city is calculated by summing the normalized values of the selected columns.
-- Cities are then ranked based on their total scores.
+
+### Aggregated Sustainability Indicators
+
+
+### Sustainability score
+
+
+
 
 ### Clustering:
 - KMeans clustering is performed on the normalized data (excluding the region and total score columns) to categorize cities into clusters based on their overall characteristics.
