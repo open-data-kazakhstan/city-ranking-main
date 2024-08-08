@@ -54,12 +54,24 @@ We have also added some metadata such as column descriptions and [data packaged]
 
 
 ### Aggregated Sustainability Indicators
-
+Summary of Normalized Indicators:
+![normalized_indicators](https://github.com/user-attachments/assets/ecf220e3-490b-461b-9d9e-7e4d3b69227f)
+Correlation Matrix:
+![correlation](https://github.com/user-attachments/assets/529e879d-4ac2-413c-b362-1b01db7972ae)
 
 ### Sustainability score
 
+Regions by sustainability score for equally assigned weight:
+![equal_weight](https://github.com/user-attachments/assets/017387d4-c0b4-44a2-bad9-dca8739f17d8)
 
+Regions by sustainability score for Environmental importance weighting:
+![environmental](https://github.com/user-attachments/assets/fe41ff7d-0560-4f29-a95f-2f5f82699877)
 
+Regions with top 5 and bottom 5 sustainability score for equally assigned weight.
+![equal_map](https://github.com/user-attachments/assets/127181b5-fe0a-4100-a80f-3758913b00db)
+
+Regions with top 5 and bottom 5 sustainability score for Environmental importance weighting.
+![environmental_map](https://github.com/user-attachments/assets/ccc33907-a36e-49d5-9b56-30e50ec23ff3)
 
 ### Clustering:
 - KMeans clustering is performed on the normalized data (excluding the region and total score columns) to categorize cities into clusters based on their overall characteristics.
